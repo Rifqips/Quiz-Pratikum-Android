@@ -30,6 +30,7 @@ class WelcomeActivity : AppCompatActivity() {
             }
             startActivity(intentMainActivity)
         }
+
     }
 
     private fun saveData(){

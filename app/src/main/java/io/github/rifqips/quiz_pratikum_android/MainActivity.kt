@@ -62,6 +62,7 @@ class MainActivity : AppCompatActivity() {
             }
             startActivity(intentGotoData)
         }
+
     }
 
     private fun updateData(){
@@ -72,6 +73,16 @@ class MainActivity : AppCompatActivity() {
             tvWelcome.visibility = View.GONE
         }else {
             tvWelcome.visibility = View.VISIBLE
+        }
+    }
+
+    fun onClick(v: View) {
+        when (v.id) {
+            R.id.btn_submit -> run {
+                val DataActivity = Intent(this@MainActivity, DataActivity::class.java)
+                startActivity(DataActivity)
+                Toast.makeText(this, "Dibaca Bukunya !", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
